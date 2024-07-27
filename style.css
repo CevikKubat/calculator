@@ -32,6 +32,10 @@ body{
     background-color: grey;;
 }
 
+.buttons:active{
+    background: rgba(128, 128, 128, 0.761);
+}
+
 .operator{
     display: flex;
     justify-content: center;
@@ -43,4 +47,8 @@ body{
     border: none;
     color: white;
     background-color: orange;
+}
+
+.operator:active{
+    background: rgba(255, 166, 0, 0.738);
 }
