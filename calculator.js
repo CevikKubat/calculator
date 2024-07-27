@@ -25,15 +25,3 @@ const factorial = function(number) {
   }
   return sum;
 };
-
-// Do not edit below this line
-module.exports = {
-  add,
-  subtract,
-  sum,
-  multiply,
-  power,
-  factorial
-};
-
-console.log(factorial(3));
