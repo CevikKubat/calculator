@@ -19,6 +19,31 @@ body{
     gap: 5px;
 }
 
+.top-row{
+    display: flex;
+    gap: 5px;
+}
+
+#C{
+    flex: 1;
+    border-radius: 20px;
+}
+
+#equal{
+    flex: 1;
+    border-radius: 20px;
+}
+
+.bottom-row{
+    display: flex;
+    gap: 5px;
+}
+
+#zero{
+    flex: 1;
+    border-radius: 20px;
+}
+
 .buttons{
     display: flex;
     justify-content: center;
@@ -52,3 +77,4 @@ body{
 .operator:active{
     background: rgba(255, 166, 0, 0.738);
 }
+

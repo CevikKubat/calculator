@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"defer></script>
 </head>
 <body>
     <div class="calculator">
+        <div class="top-row">
+            <button class="operator" id="C">C</button> 
+            <button class="operator" id="equal">=</button> 
+        </div>
         <div class="row">
             <button class="buttons" id="1">1</button> 
             <button class="buttons" id="2">2</button> 
@@ -26,14 +31,11 @@
             <button class="buttons" id="9">9</button> 
             <button class="operator" id="*">*</button> 
         </div>
-        <div class="row" id="operators">
-            <button class="buttons" id="0">0</button> 
+        <div class="bottom-row">
+            <button class="buttons" id="zero">0</button> 
             <button class="buttons" id=",">,</button>
-            <button class="operator" id="=">=</button> 
             <button class="operator" id="/">/</button> 
         </div>
     </div>
-
-
 </body>
 </html>
