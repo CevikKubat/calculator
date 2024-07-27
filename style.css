@@ -1,0 +1,46 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+body{
+    display: flex;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row{
+    display: flex;
+    gap: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    background-color: grey;;
+}
+
+.operator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: none;
+    color: white;
+    background-color: orange;
+}
