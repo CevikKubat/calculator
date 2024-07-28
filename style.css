@@ -6,12 +6,17 @@ html{
 
 body{
     display: flex;
+    justify-content: center;
+    padding-top: 20px;;
 }
 
 .calculator{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    padding: 7px;
+    border-radius: 20px;
+    border: solid rgb(150, 150, 150);
 }
 
 .row{
@@ -22,7 +27,6 @@ body{
 .screen{
     display: flex;
     background-color: rgb(112, 114, 87);
-    color: green;
     height: 40px;
     border-radius: 5px;
 }
@@ -47,7 +51,7 @@ body{
     gap: 5px;
 }
 
-#zero{
+#n0{
     flex: 1;
     border-radius: 20px;
 }
