@@ -14,8 +14,11 @@ function main(){
 
   calculator.addEventListener("click", (e) => {
     let target = e.target;
+    
+    // Assign buttons to variables
     const number = target.getAttribute("data-number");
-    console.log(number);
+    const operator = target.getAttribute("data-operator");
+    // Display numbers on screen
     if (number !== null){
       screen.textContent += number;
     }
