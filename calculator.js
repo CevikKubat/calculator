@@ -12,21 +12,50 @@ function main(){
   const calculator = document.querySelector("#calculator");
   const screen = document.querySelector("#screen");
 
+  let result = 0;
+  let inputString = ""
+
   calculator.addEventListener("click", (e) => {
     let target = e.target;
     
     // Assign buttons to variables
     const number = target.getAttribute("data-number");
     const operator = target.getAttribute("data-operator");
+
     // Display numbers on screen
     if (number !== null){
       screen.textContent += number;
+      inputString += number;
     }
+    if (/*isValidInput(inputString) && */operator !== null){
+      inputString += operator;
     }
+    console.log(cleanInputString(inputString));
+
+    }
+
+    
   )
 }
 
+// isValidInput(inputString);{
 
+// };
+
+function cleanInputString(inputString) {
+  let lastChar = inputString.charAt(inputString.length - 1);
+  let secondLastChar = inputString.charAt(inputString.length - 2);
+  if (isOperator(lastChar) && isOperator(secondLastChar)){
+    inputString = "help";
+  }
+  return inputString;
+}
+
+function isOperator(char){
+  if (char === "+" || char === "-" || char === "*" || char === "/") {
+    return true;
+  }
+}
 
 
 
