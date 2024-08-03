@@ -13,7 +13,8 @@ function main(){
   const screen = document.querySelector("#screen");
 
   let result = 0;
-  let inputString = ""
+  let inputString = "";
+  let cleanString = "";
 
   calculator.addEventListener("click", (e) => {
     let target = e.target;
@@ -27,10 +28,13 @@ function main(){
       screen.textContent += number;
       inputString += number;
     }
-    if (/*isValidInput(inputString) && */operator !== null){
+    if (operator !== null){
       inputString += operator;
+      if (!isValidInput(inputString)){
+        inputString = cleanInput(inputString);
+      }
     }
-    console.log(cleanInputString(inputString));
+    console.log(inputString);
 
     }
 
@@ -38,17 +42,20 @@ function main(){
   )
 }
 
-// isValidInput(inputString);{
 
-// };
+function isValidInput(inputString){
+  if (inputString.length >= 2){
+    let lastChar = inputString.slice(-1);
+    let secondLastChar = inputString.slice(-2, -1);
+    
+    if (isOperator(lastChar) && isOperator(secondLastChar)) {
+      return false;
+    }
+    else if (isOperator(lastChar)) {
+      return true;
+    }
 
-function cleanInputString(inputString) {
-  let lastChar = inputString.charAt(inputString.length - 1);
-  let secondLastChar = inputString.charAt(inputString.length - 2);
-  if (isOperator(lastChar) && isOperator(secondLastChar)){
-    inputString = "help";
   }
-  return inputString;
 }
 
 function isOperator(char){
@@ -57,15 +64,9 @@ function isOperator(char){
   }
 }
 
-
-
-
-
-
-
-
-
-
+function cleanInput(inputString){
+  return inputString.slice(0, -1);
+}
 
 
 
