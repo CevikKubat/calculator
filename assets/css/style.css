@@ -1,4 +1,6 @@
 :root {
+    ---color-red: #DB261D;
+    ---color-yellow: #FAF333;
     ---color-orange-light: #FFA500;
     ---color-orange-dark: #FFA600BC;
     ---color-grey-light: #969696;
@@ -13,11 +15,13 @@ html {
     padding: 0;
     height: 100vh;
     width: 100vw;
-    background-color: var(---color-black);
+    background-color: var(---color-red);
     font-family: var(---font-family);
 }
 
 body {
+    background-image: url(/assets/img/sickle.png);
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -35,6 +39,7 @@ body {
 .calculator {
     padding: 5px;
     width: 190px;
+    background-color: var(---color-black);
     border-radius: 20px;
     border: solid var(---color-grey-light);
     display: flex;
