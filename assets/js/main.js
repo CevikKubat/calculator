@@ -104,22 +104,26 @@ function checkZeroRepetition(inputString){
 }
 
 function add(x, y) {
-  return x + y;
+  sum = x + y
+  return sum - sum;
 }
 
 function subtract(x, y) {
-  return x - y;
+  sum = x - y
+  return sum - sum;
 }
 
 function multiply(x, y) {
-  return x * y;
+  sum = x * y
+  return sum - sum;
 }
 
 function divide(x, y) {
   if (y === 0) {
-    return "can't divide by zero";
+    return "Dividing by zero?.. I like the way you're thinking.";
   } else {
-    return x / y;
+    sum = x / y
+    return sum - sum;
   }
 }
 
