@@ -11,20 +11,29 @@
 html {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    width: 100vw;
     background-color: var(---color-black);
+    font-family: var(---font-family);
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;;
+    align-items: center;
 }
 
 .calculator {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 7px;
+    padding: 10px;
     border-radius: 20px;
     border: solid var(---color-grey-light);
 }
@@ -34,14 +43,21 @@ body {
     gap: 5px;
 }
 
+button {
+    margin: 2px;
+}
+
 .screen {
+    margin: 10px 0;
+    padding: 2px;
+    width: 100%;
     display: flex;
-    width: 175px;
-    flex-wrap: wrap;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     background-color: var(---color-grey-dark);
-    height: 40px;
+    height: 50px;
     border-radius: 5px;
-    font-family: var(---font-family);
 }
 
 .top-row {
