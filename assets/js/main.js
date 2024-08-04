@@ -1,4 +1,4 @@
-function main(){
+function main() {
   const calculator = document.querySelector("#calculator");
   const screen = document.querySelector("#screen");
 
@@ -15,22 +15,22 @@ function main(){
     const operator = target.getAttribute("data-operator");
 
     // Display numbers on screen
-    if (number !== null){
+    if (number !== null) {
       screen.textContent += number;
       inputString += number;
-      if (checkZeroRepetition(inputString)){
+      if (checkZeroRepetition(inputString)) {
         inputString = cleanInput(inputString);
       }
     }
-    if (operator !== null){
+    if (operator !== null) {
       inputString += operator;
       screen.textContent = "";
       // console.log(isValidInput(inputString))
-      if (!isValidInput(inputString)){
+      if (!isValidInput(inputString)) {
         inputString = cleanInput(inputString);
       }
     }
-    if (operator === "="){
+    if (operator === "=") {
       outputString = inputString.replace(/([+\-*\/])/g, ' $1 ');
       console.log(outputString);
       let [x, op, y] = outputString.split(' ');
@@ -43,7 +43,7 @@ function main(){
       screen.textContent = result;
       inputString = result;
     }
-    if (operator == "C"){
+    if (operator == "C") {
       inputString = "";
       screen.textContent = inputString;
     }
@@ -53,7 +53,7 @@ function main(){
   )
 }
 
-function isValidInput(inputString){
+function isValidInput(inputString) {
   if (inputString.length >= 2){
     let lastChar = inputString.slice(-1);
     let secondLastChar = inputString.slice(-2, -1);
@@ -68,17 +68,17 @@ function isValidInput(inputString){
   }
 }
 
-function isOperator(char){
+function isOperator(char) {
   if (char === "+" || char === "-" || char === "*" || char === "/" || char === ","){
     return true;
   }
 }
 
-function cleanInput(inputString){
+function cleanInput(inputString) {
   return inputString.slice(0, -1);
 }
 
-function calculate(x, op, y){
+function calculate(x, op, y) {
   x = parseFloat(x);
   y = parseFloat(y);
   switch (op) {
@@ -93,7 +93,7 @@ function calculate(x, op, y){
   }
 }
 
-function checkZeroRepetition(inputString){
+function checkZeroRepetition(inputString) {
   if (inputString.length >= 2){
     let firstChar = inputString.slice(0, 1);
     let secondChar = inputString.slice(1, 2);
