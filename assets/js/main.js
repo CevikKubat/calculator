@@ -69,7 +69,7 @@ function isValidInput(inputString) {
 }
 
 function isOperator(char) {
-  if (char === "+" || char === "-" || char === "*" || char === "/" || char === ","){
+  if (char === "+" || char === "-" || char === "*" || char === "/" || char === ",") {
     return true;
   }
 }
