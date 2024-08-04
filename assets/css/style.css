@@ -34,8 +34,14 @@ body {
 
 .calculator {
     padding: 5px;
+    width: 190px;
     border-radius: 20px;
     border: solid var(---color-grey-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
 }
 
 .row {
@@ -49,14 +55,13 @@ button {
 
 .screen {
     margin: 10px 0;
-    padding: 2px;
-    display: flex;
-    justify-content: flex-end;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    background-color: var(---color-grey-dark);
     height: 50px;
+    inline-size: 100%;
+    background-color: var(---color-grey-dark);
     border-radius: 5px;
+    text-align: end;
+    word-wrap: break-word;
+
 }
 
 .top-row {
@@ -85,16 +90,16 @@ button {
 }
 
 .number {
+    padding: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: var(---color-grey-light);
+    color: var(---color-grey-white);
+    border-radius: 100%;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    border: none;
-    color: var(---color-grey-white);
-    background-color: var(---color-grey-light);
 }
 
 .buttons:active {
@@ -102,19 +107,18 @@ button {
 }
 
 .operator {
+    padding: 20px;
+    height: 20px;
+    width: 20px;
+    background-color: var(---color-orange-light);
+    color: var(---color-white);
+    border-radius: 100%;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    border: none;
-    color: var(---color-white);
-    background-color: var(---color-orange-light);
 }
 
 .operator:active {
     background: var(---color-orange-dark);
 }
-
